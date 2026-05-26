@@ -1,6 +1,6 @@
 # Security Policy
 
-`m365-retention-case-orchestrator` is a pure-transform library and CLI: it reads JSON exports from Microsoft Graph compliance APIs (or synthetic data) and emits a structured findings report. No network listener, no remote fetch, no Graph token storage, no execution of user-supplied code.
+`m365-retention-case-orchestrator` ships both an offline analyzer and a synthetic public dashboard surface. It reads JSON exports from Microsoft Graph compliance APIs (or synthetic data) and emits structured findings, route JSON, and prerendered HTML. No live Graph token storage, no remote fetch of tenant data, and no execution of user-supplied code is included.
 
 The input contains custodian email addresses, case names, and matter IDs — all sensitive in your tenant. Be deliberate about where you store the input and the output.
 
