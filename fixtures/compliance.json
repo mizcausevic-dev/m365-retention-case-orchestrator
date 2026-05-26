@@ -1,0 +1,78 @@
+{
+  "retentionLabels": [
+    {
+      "id": "label-finance",
+      "displayName": "Finance Records",
+      "retentionTrigger": "dateCreated",
+      "retentionDuration": { "totalDays": 2555 },
+      "behaviorDuringRetentionPeriod": "retainAsRegulatoryRecord",
+      "actionAfterRetentionPeriod": "startDispositionReview",
+      "isInUse": true
+    },
+    {
+      "id": "label-marketing-incomplete",
+      "displayName": "Marketing Drafts",
+      "retentionTrigger": "dateLabeled",
+      "isInUse": false
+    }
+  ],
+  "retentionPolicies": [
+    {
+      "id": "pol-exchange",
+      "displayName": "Exchange long-term retention",
+      "workloads": ["Exchange"],
+      "retentionDays": 2555,
+      "action": "retain",
+      "isEnabled": true
+    },
+    {
+      "id": "pol-spo-onedrive",
+      "displayName": "SharePoint + OneDrive retention",
+      "workloads": ["SharePoint", "OneDrive"],
+      "retentionDays": 2555,
+      "action": "retain",
+      "isEnabled": true
+    },
+    {
+      "id": "pol-teams-disabled",
+      "displayName": "Teams chat retention",
+      "workloads": ["Teams"],
+      "retentionDays": 365,
+      "action": "retain",
+      "isEnabled": false
+    }
+  ],
+  "cases": [
+    {
+      "id": "case-2025-001",
+      "displayName": "Q4 audit collection",
+      "status": "active",
+      "createdDateTime": "2025-10-12T00:00:00Z",
+      "lastModifiedDateTime": "2025-12-01T00:00:00Z",
+      "externalId": "MATTER-1234",
+      "custodians": [
+        { "id": "cust-1", "email": "alice@example.com", "holdStatus": "applied" },
+        { "id": "cust-2", "email": "bob@example.com", "holdStatus": "pending" }
+      ]
+    },
+    {
+      "id": "case-2026-002",
+      "displayName": "Vendor dispute hold",
+      "status": "active",
+      "createdDateTime": "2026-05-10T00:00:00Z",
+      "lastModifiedDateTime": "2026-05-22T00:00:00Z",
+      "custodians": []
+    },
+    {
+      "id": "case-2025-003",
+      "displayName": "M&A diligence",
+      "status": "closedWithError",
+      "createdDateTime": "2025-04-01T00:00:00Z",
+      "closedDateTime": "2025-09-15T00:00:00Z",
+      "externalId": "MATTER-9090",
+      "custodians": [
+        { "id": "cust-3", "email": "carol@example.com", "holdStatus": "error" }
+      ]
+    }
+  ]
+}

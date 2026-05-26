@@ -1,0 +1,36 @@
+{
+  "retentionLabels": [
+    {
+      "id": "label-records",
+      "displayName": "Business Records",
+      "retentionTrigger": "dateCreated",
+      "retentionDuration": { "totalDays": 2555 },
+      "behaviorDuringRetentionPeriod": "retainAsRecord",
+      "actionAfterRetentionPeriod": "startDispositionReview",
+      "isInUse": true
+    }
+  ],
+  "retentionPolicies": [
+    {
+      "id": "pol-all",
+      "displayName": "M365 default retention",
+      "workloads": ["Exchange", "SharePoint", "OneDrive", "Teams"],
+      "retentionDays": 2555,
+      "action": "retain",
+      "isEnabled": true
+    }
+  ],
+  "cases": [
+    {
+      "id": "case-cln-1",
+      "displayName": "Closed audit",
+      "status": "closed",
+      "createdDateTime": "2025-01-01T00:00:00Z",
+      "closedDateTime": "2025-06-01T00:00:00Z",
+      "externalId": "MATTER-0001",
+      "custodians": [
+        { "id": "cust-x", "email": "x@example.com", "holdStatus": "applied" }
+      ]
+    }
+  ]
+}
