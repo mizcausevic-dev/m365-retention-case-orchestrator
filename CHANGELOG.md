@@ -1,5 +1,15 @@
 # Changelog
 
+## v1.0.0-prod — 2026-05-27
+
+Production-readiness hardening on top of v0.1-shipped.
+
+- Verified all CI gates pass on a clean `npm ci`: lint, typecheck, coverage (98.19% statements / 90.24% branches / 95% functions / 98.19% lines), build, demo, smoke, `npm audit --audit-level=high` (0 vulnerabilities).
+- Confirmed AGPL-3.0-or-later licensing, `SECURITY.md`, `CODE_OF_CONDUCT.md`, weekly `dependabot.yml` for `npm` + `github-actions`.
+- Confirmed CI workflow runs the Node 20 + 22 matrix and the production-status surfaces (CI / License / Deploy badges + `## Production status` block) are intact in the README.
+- Live operator surface running at https://retention.kineticgain.com/ via the GitHub Pages deploy rail.
+- No changes to source, README content, docs, or screenshots — those remain the v0.1-shipped surface from the build lane.
+
 ## v0.1.0 — 2026-05-27
 
 - Initial release: operator surface for Microsoft 365 Purview retention policies and eDiscovery cases.
