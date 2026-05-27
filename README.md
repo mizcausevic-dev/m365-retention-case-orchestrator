@@ -106,6 +106,7 @@ Open:
 | License | [AGPL-3.0-or-later](./LICENSE) |
 | Deploy | Static prerender -> **https://retention.kineticgain.com/** |
 | Data posture | Synthetic sample data only; no live tenant exports, Graph tokens, or Purview admin credentials |
+| Suite | Part of the [Kinetic Gain Protocol Suite](https://suite.kineticgain.com/) operator portfolio · apex: [kineticgain.com](https://kineticgain.com) |
 
 ## Docs
 
